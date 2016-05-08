@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React, { PropTypes } from 'react';
+import classNames from 'classnames';
 
 class EventsList extends React.Component {
   render () {

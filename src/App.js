@@ -99,7 +99,7 @@ export default class App extends Component {
             </div>
             <section className="b-box">
               <div className="b-box__col-1-wrap">
-                <div className="b-box__col-1">
+                <div className="b-box__col-1 b-widget">
                   <div className="b-title">
                     Новости
                   </div>
@@ -139,7 +139,7 @@ export default class App extends Component {
                   />
                 </div>
               </div>
-              <div className="b-box__col-2">
+              <div className="b-box__col-2 b-widget">
                 <div className="b-title">
                   Информационные системы Комиссии
                 </div>
@@ -169,43 +169,52 @@ export default class App extends Component {
                 />
               </div>
             </section>
-            <section style={{ background: 'white', padding: '30px' }} className="b-box">
+            <section className="b-widget">
               <div className="b-title">
                 Предстоящие события
               </div>
-              <EventsList
-                events = {[
-                  {
-                    date: '5 декабря',
-                    current: false,
-                    text: 'Практический семинар: «НДС: к чему готовиться, и как избежать ошибок».'
-                  },
-                  {
-                    date: '8 декабря',
-                    current: true,
-                    text: 'Семинар о законных способах налоговой оптимизации, которые предлагает российское налоговое законодательство.'
-                  },
-                  {
-                    date: '10 Декабря',
-                    current: false,
-                    text: 'Семинар о законных способах налоговой оптимизации, которые предлагает российское налоговое законодательство.'
-                  },
-                  {
-                    date: '17 Декабря',
-                    current: false,
-                    text: 'Заседание Коллегии ЕЭК №27'
-                  },
-                  {
-                    date: '12 Декабря',
-                    current: false,
-                    text: 'Практический семинар: «НДС: к чему готовиться, и как избежать ошибок». '
-                  },
-                ]}
-                />
+              <div className="b-box">
+                <div className="b-box__col-1-wrap">
+                  <div className="b-box__col-1">
+                    <EventsList
+                      events = {[
+                        {
+                          date: '5 декабря',
+                          current: false,
+                          text: 'Практический семинар: «НДС: к чему готовиться, и как избежать ошибок».'
+                        },
+                        {
+                          date: '8 декабря',
+                          current: true,
+                          text: 'Семинар о законных способах налоговой оптимизации, которые предлагает российское налоговое законодательство.'
+                        },
+                        {
+                          date: '10 Декабря',
+                          current: false,
+                          text: 'Семинар о законных способах налоговой оптимизации, которые предлагает российское налоговое законодательство.'
+                        },
+                        {
+                          date: '17 Декабря',
+                          current: false,
+                          text: 'Заседание Коллегии ЕЭК №27'
+                        },
+                        {
+                          date: '12 Декабря',
+                          current: false,
+                          text: 'Практический семинар: «НДС: к чему готовиться, и как избежать ошибок». '
+                        },
+                      ]}
+                      />
+                  </div>
+                </div>
+                <div className="b-box__col-2">
+                  wefwefwefew
+                </div>
+              </div>
             </section>
             <section className="b-box">
               <div className="b-box__col-1-wrap">
-                <div className="b-box__col-1">
+                <div className="b-box__col-1 b-widget">
                   <div className="b-title">
                     Последние документы
                   </div>
@@ -238,7 +247,7 @@ export default class App extends Component {
                   </div>
                 </div>
               </div>
-              <div className="b-box__col-2">
+              <div className="b-box__col-2 b-widget">
                 <div className="b-title">
                   Текущие задачи
                 </div>
