@@ -1,0 +1,18 @@
+.b-simple-nav {
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    &:after {
+      content: '';
+      height: 24px;
+      width: 1px;
+      background: #a7a7a7;
+      margin: 0 15px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  &__item:last-child:after {
+    display: none;
+  }
+}

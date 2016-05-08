@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('/src/webFonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot');
+    src: url('/src/webFonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/src/webFonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff') format('woff'),
+         url('/src/webFonts/opensans_regular_macroman/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('/src/webFonts/opensans_regular_macroman/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+@import (css) "~normalize.css";
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background: #f1f4f9;
+  min-width: 900px;
+  max-width: 1400px;
+  font-family: 'Open Sans';
+  font-size: 15px;
+  background: linear-gradient(to right, #3c70a2 274px, #f1f4f9 0px);
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #5c8fb4;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+@import 'b-grid/b-grid';
+@import 'b-man/b-man';
+@import 'b-action/b-action';
+@import 'b-search/b-search';
+@import 'b-page/b-page';
+@import 'b-header/b-header';
+@import 'b-logo/b-logo';
+@import 'b-doc-icon/b-doc-icon';
+@import 'b-events-list/b-events-list';
+@import 'b-doc-list-pr/b-doc-list-pr';
+@import 'b-action/b-action';
+// b-calendar
+@import 'b-progress/b-progress';
+@import 'b-news-list-preview/b-news-list-preview';
+@import 'b-horizontal-nav/b-horizontal-nav';
+@import 'b-vertical-nav/b-vertical-nav';
+@import 'b-systems-list/b-systems-list';
+@import 'b-simple-nav/b-simple-nav';
+@import 'b-footer/b-footer';
+@import 'b-f-logo/b-f-logo';
+@import 'b-title/b-title';
+
+
+
+.b-box {
+  .clearfix;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  &__col-1-wrap {
+    width: 100%;
+    float: left;
+  }
+  &__col-1 {
+    margin-right: 333px;
+    background: white;
+    border-right: 30px solid transparent;
+    padding: 24px;
+  }
+  &__col-2 {
+    float: right;;
+    width: 297px;
+    background: white;
+    padding: 20px;
+    margin-left: -297px;
+  }
+  &_head  {
+    margin: 0;
+  }
+  &_head &__col-1 {
+    padding: 0;
+    background: transparent;
+  }
+  &_head &__col-2 {
+    padding: 0;
+    background: transparent;
+    padding-top: 20px;
+  }
+}
+
+.b-actions {
+  display: table;
+  width: 100%;
+  border-collapse:separate;
+  border-spacing: 30px 0;
+  &__el {
+    display: table-cell;
+    vertical-align: middle;
+    width: 33%;
+    border: 1px solid #d1d1d1;
+    padding: 5px;
+    background: white;
+  }
+}
+
+@import 'dev';

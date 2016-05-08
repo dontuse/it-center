@@ -1,0 +1,37 @@
+.b-systems-list {
+  &__item {
+    display: block;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    .clearfix;
+    border-bottom: 1px solid #d1d1d1;
+    border-bottom: 1px solid #d1d1d1;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &__pic-box {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    overflow: hidden;
+    float: left;
+    & img {
+      max-width: 100%;
+      max-height: 100%;
+      vertical-align: middle;
+    }
+  }
+  &__conent-box {
+    overflow: hidden;
+    line-height: 70px;
+    padding-left: 20px;
+  }
+  &__conent-box:before {
+  }
+  &__name {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.2
+  }
+}
