@@ -23,9 +23,11 @@ export default class App extends Component {
             </a>
           </aside>
           <section className="b-grid__col-2 b-page__head-box b-box b-box_head">
-            <div className="b-box__col-1">
-              <HorizontalNav
-              />
+            <div className="b-box__col-1-wrap">
+              <div className="b-box__col-1">
+                <HorizontalNav
+                  />
+              </div>
             </div>
             <div className="b-box__col-2">
               <Search />
@@ -103,7 +105,7 @@ export default class App extends Component {
                     news = {[
                       {
                         content: (<div><a href="">Нортон Э.</a> празднует день рождения</div>),
-                        pic: '/tmp/dude.jpg'
+                        pic: '/tmp/news1.jpg',
                       },
                       {
                         content: (
@@ -112,7 +114,8 @@ export default class App extends Component {
                            оптимизации, гармонизации и описания общих процессов</a>
                           </div>
                         ),
-                        pic: '/tmp/dude.jpg',
+                        pic: '/tmp/news2.jpg',
+                        meta: 'Добавил Сергеев С.А.  сегодня в 10:15',
                       },
                       {
                         content: (
@@ -121,13 +124,14 @@ export default class App extends Component {
                            оптимизации, гармонизации и описания общих процессов</a>
                           </div>
                         ),
-                        pic: '/tmp/dude.jpg',
+                        pic: '/tmp/news3.jpg',
+                        meta: 'Добавил Сергеев С.А.  сегодня в 10:15',
                       },
                       {
                         content: (
                           <div><a href="">Иванов И.И.</a> — новый сотрудник отдела</div>
                         ),
-                        pic: '/tmp/dude.jpg'
+                        pic: '/tmp/news4.jpg'
                       },
                     ]}
                   />
@@ -177,22 +181,22 @@ export default class App extends Component {
                   {
                     date: '8 декабря',
                     current: true,
-                    text: 'Решения Совета Евразийской экономической комиссии в 2015 году'
+                    text: 'Семинар о законных способах налоговой оптимизации, которые предлагает российское налоговое законодательство.'
                   },
                   {
                     date: '10 Декабря',
                     current: false,
-                    text: 'Порядок организации проведения заседания Евразийского совета'
+                    text: 'Семинар о законных способах налоговой оптимизации, которые предлагает российское налоговое законодательство.'
                   },
                   {
                     date: '17 Декабря',
                     current: false,
-                    text: 'Распоряжения Высшего Евразийского экономического совета на уровне глав правительств'
+                    text: 'Заседание Коллегии ЕЭК №27'
                   },
                   {
                     date: '12 Декабря',
                     current: false,
-                    text: 'Меморандум о сотрудничестве по вопросам торговли между Евразийской экономической комиссией и Кабинетом Министров Украины'
+                    text: 'Практический семинар: «НДС: к чему готовиться, и как избежать ошибок». '
                   },
                 ]}
                 />
@@ -233,16 +237,34 @@ export default class App extends Component {
                 <div className="b-title">
                   Текущие задачи
                 </div>
-                <div className="d-box">
-                  <div>в работе</div>
-                  <div className="b-progress">
-                    <div
-                      style={{ width: '20%'}}
-                      className="b-progress__line">
+                <div className="b-tasks-list">
+                  <div className="b-tasks-list__el">
+                    <div className="b-tasks-list__status">в работе</div>
+                    <div className="b-progress b-tasks-list__progress">
+                      <div
+                        style={{ width: '20%'}}
+                        className="b-progress__line">
+                      </div>
+                    </div>
+                    <div className="b-tasks-list__txt">
+                      <a href="">
+                        Порядок организации проведения заседания Высшего Евразийского экономического совета
+                      </a>
                     </div>
                   </div>
-                  <div>
-                    Порядок организации проведения заседания Высшего Евразийского экономического совета
+                  <div className="b-tasks-list__el">
+                    <div className="b-tasks-list__status">этап просрочен</div>
+                    <div className="b-progress b-progress_alarm b-tasks-list__progress">
+                      <div
+                        style={{ width: '56%'}}
+                        className="b-progress__line">
+                      </div>
+                    </div>
+                    <div className="b-tasks-list__txt">
+                      <a href="">
+                        Порядок организации проведения заседания Высшего Евразийского экономического совета
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

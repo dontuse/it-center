@@ -9,9 +9,14 @@ class NewsListPreview extends React.Component {
               <div className="b-news-list-preview__pic-box">
                 <img className="b-news-list-preview__img" src={oneNews.pic} alt=""/>
               </div>
-              <div className="b-news-list-preview__txt">
-                {oneNews.content}
-              </div>
+              <section className="b-news-list-preview__c-box">
+                <div className="b-news-list-preview__txt">
+                  {oneNews.content}
+                </div>
+                <div className="b-news-list-preview__meta">
+                  {oneNews.meta}
+                </div>
+              </section>
           </div>)}
         </div>
     )
