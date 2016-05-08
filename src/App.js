@@ -13,28 +13,30 @@ export default class App extends Component {
     return (
       <div className="b-page">
         <header className="b-header b-grid">
-          <aside className="b-grid__col-1">
-            <a className="b-logo" href="">
-              <span className="b-logo__pic-box"></span>
-              <span className="b-logo__txt-box">
-                Информационно-
-                справочная система
-              </span>
-            </a>
-          </aside>
-          <section className="b-grid__col-2 b-page__head-box b-box b-box_head">
-            <div className="b-box__col-1-wrap">
-              <div className="b-box__col-1">
-                <HorizontalNav
-                  />
+          <div className="b-wrap">
+            <aside className="b-grid__col-1">
+              <a className="b-logo" href="">
+                <span className="b-logo__pic-box"></span>
+                <span className="b-logo__txt-box">
+                  Информационно-
+                  справочная система
+                </span>
+              </a>
+            </aside>
+            <section className="b-grid__col-2 b-page__head-box b-box b-box_head">
+              <div className="b-box__col-1-wrap">
+                <div className="b-box__col-1">
+                  <HorizontalNav
+                    />
+                </div>
               </div>
-            </div>
-            <div className="b-box__col-2">
-              <Search />
-            </div>
-          </section>
+              <div className="b-box__col-2">
+                <Search />
+              </div>
+            </section>
+          </div>
         </header>
-        <section className="b-grid">
+        <section className="b-grid b-wrap">
           <aside className="b-grid__col-1 b-page__aside">
             <Man
               name = 'Константинопольский Константин Викторович'
@@ -231,6 +233,9 @@ export default class App extends Component {
                       },
                     ]}
                   />
+                  <div className="b-all">
+                    <a href="">Все документы (105)</a>
+                  </div>
                 </div>
               </div>
               <div className="b-box__col-2">
@@ -266,6 +271,9 @@ export default class App extends Component {
                       </a>
                     </div>
                   </div>
+                </div>
+                <div className="b-all">
+                  <a href="">Все задачи (26)</a>
                 </div>
               </div>
             </section>
