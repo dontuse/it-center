@@ -7,7 +7,9 @@ class EventsList extends React.Component {
       <div className="b-events-list">
         {this.props.events.map((event, key) =>
           <div key={key} className="b-events-list__event">
-            <div className="b-events-list__date">
+            <div
+              className={classNames('b-events-list__date', 
+              { 'b-events-list__date_current': event.current })}>
               {event.date}
             </div>
             <div className="b-events-list__content">

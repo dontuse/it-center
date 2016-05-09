@@ -1,7 +1,34 @@
 .b-action {
   display: inline-block;
   vertical-align: middle;
-  background: url('/src/blocks/i-pic/action-1.png') no-repeat 20px center;
+  background:  no-repeat 20px center;
   padding: 20px;
   padding-left: 64px;
+  &__type-1 {
+    background-image: url('/src/blocks/i-pic/action-1.png');
+  }
+  &__type-2 {
+    background-image: url('/src/blocks/i-pic/action-2.png');
+  }
+  &__type-3 {
+    background-image: url('/src/blocks/i-pic/action-3.png');
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 144dpi) {
+  .b-action {
+    &__type-1 {
+      background-image: url('/src/blocks/i-pic/action-1_x_2.png');
+      background-size: 30px;
+    }
+    &__type-2 {
+      background-image: url('/src/blocks/i-pic/action-2_x_2.png');
+      background-size: 30px;
+    }
+    &__type-3 {
+      background-image: url('/src/blocks/i-pic/action-3_x_2.png');
+      background-size: 30px;
+    }
+  }
 }

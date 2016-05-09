@@ -81,18 +81,18 @@ export default class App extends Component {
             <div className="b-page__actions-box">
               <section className="b-actions">
                 <a className="b-actions__el" href="">
-                  <span className="b-action">
+                  <span className="b-action b-action__type-1">
                     <span>Забронировать студию</span>
                   </span>
                 </a>
                 <a className="b-actions__el" href="">
-                  <span className="b-action">
-                    <span>Забронировать студию</span>
+                  <span className="b-action b-action__type-2">
+                    <span>Справочник сотрудников</span>
                   </span>
                 </a>
                 <a className="b-actions__el" href="">
-                  <span className="b-action">
-                    <span>Забронировать студию</span>
+                  <span className="b-action b-action__type-3">
+                    <span>Мои подписки</span>
                   </span>
                 </a>
               </section>

@@ -4,9 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var autoprefixer = require('autoprefixer');
 
 module.exports = {
-  devtool: 'eval',
   entry: [
-    'webpack-hot-middleware/client',
     './src/index'
   ],
   output: {
@@ -15,7 +13,17 @@ module.exports = {
     publicPath: '/static/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new ExtractTextPlugin('[name]-[hash].min.css'),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false,
+        screw_ie8: true
+      }
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': 'production'
+    })
   ],
   module: {
     loaders: [{
@@ -25,7 +33,7 @@ module.exports = {
     },
     {
       test: /\.less$/,
-      loader: 'style!css!postcss-loader!less'
+      loader:  ExtractTextPlugin.extract('style!css!postcss-loader!less')
     },
     {
       test: /\.(eot|woff|woff2|ttf|svg|png|jpg)$/,
