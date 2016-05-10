@@ -14,7 +14,8 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new ExtractTextPlugin('[name]-[hash].min.css'),
+    new webpack.optimize.DedupePlugin(),
+    new ExtractTextPlugin('[name].css'),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
         warnings: false,
@@ -33,7 +34,7 @@ module.exports = {
     },
     {
       test: /\.less$/,
-      loader:  ExtractTextPlugin.extract('style!css!postcss-loader!less')
+      loader: ExtractTextPlugin.extract('style-loader','css!postcss-loader!less')
     },
     {
       test: /\.(eot|woff|woff2|ttf|svg|png|jpg)$/,

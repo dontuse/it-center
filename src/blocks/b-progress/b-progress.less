@@ -1,12 +1,31 @@
 .b-progress {
   border-bottom: 1px solid #c2c5bf;
+  position: relative;
+  &__wrapper {
+    overflow: hidden;
+    background: #e8e8e8;
+    border-bottom: 1px solid #c4c4c4;
+    border-radius: 4px;
+  }
   &__line {
     background: #9ec764;
+    border-radius: 4px;
     height: 7px;
   }
   &__mark {
     background: #848484;
     width: 3px;
+    position: absolute;
+    top: 0;
+    height: 14px;
+  }
+  &__mark-val {
+    position: absolute;
+    top: 100%;
+    width: 100px;
+    right: -50px;
+    text-align: center;
+    font-size: 13px;
   }
   &_alarm {}
   &_alarm &__line {

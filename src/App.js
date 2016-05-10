@@ -6,7 +6,8 @@ import Search from './components/Search.jsx';
 import NewsListPreview from './components/NewsListPreview.jsx';
 import EventsList from './components/EventsList.jsx';
 import DocListPr from './components/DocListPr.jsx';
-import SystemsList from './components/SystemsList.jsx'
+import SystemsList from './components/SystemsList.jsx';
+import Progress from './components/Progress.jsx';
 
 export default class App extends Component {
   render() {
@@ -100,9 +101,11 @@ export default class App extends Component {
             <section className="b-box">
               <div className="b-box__col-1-wrap">
                 <div className="b-box__col-1 b-widget">
-                  <div className="b-title">
-                    Новости
-                  </div>
+                  <header className="b-widget__head">
+                    <div className="b-title b-widget__title">
+                      Новости
+                    </div>
+                  </header>
                   <NewsListPreview
                     news = {[
                       {
@@ -137,12 +140,15 @@ export default class App extends Component {
                       },
                     ]}
                   />
+                  <a className="b-what-is-that b-widget__what-is" href=""></a>
                 </div>
               </div>
               <div className="b-box__col-2 b-widget">
-                <div className="b-title">
-                  Информационные системы Комиссии
-                </div>
+                <header className="b-widget__head">
+                  <div className="b-title b-widget__title">
+                    Информационные системы Комиссии
+                  </div>
+                </header>
                 <SystemsList
                   systems = {[
                     {
@@ -167,12 +173,15 @@ export default class App extends Component {
                     },
                   ]}
                 />
+                <a className="b-what-is-that b-widget__what-is" href=""></a>
               </div>
             </section>
             <section className="b-widget">
-              <div className="b-title">
-                Предстоящие события
-              </div>
+              <header className="b-widget__head">
+                <div className="b-title">
+                  Предстоящие события
+                </div>
+              </header>
               <div className="b-box">
                 <div className="b-box__col-1-wrap">
                   <div className="b-box__col-1">
@@ -211,13 +220,16 @@ export default class App extends Component {
                   wefwefwefew
                 </div>
               </div>
+              <a className="b-what-is-that b-widget__what-is" href=""></a>
             </section>
             <section className="b-box">
               <div className="b-box__col-1-wrap">
                 <div className="b-box__col-1 b-widget">
-                  <div className="b-title">
-                    Последние документы
-                  </div>
+                  <header className="b-widget__head">
+                    <div className="b-title">
+                      Последние документы
+                    </div>
+                  </header>
                   <DocListPr
                     docs = {[
                       {
@@ -248,18 +260,19 @@ export default class App extends Component {
                 </div>
               </div>
               <div className="b-box__col-2 b-widget">
-                <div className="b-title">
-                  Текущие задачи
-                </div>
+                <header className="b-widget__head">
+                  <div className="b-title">
+                    Текущие задачи
+                  </div>
+                </header>
                 <div className="b-tasks-list">
                   <div className="b-tasks-list__el">
                     <div className="b-tasks-list__status">в работе</div>
-                    <div className="b-progress b-tasks-list__progress">
-                      <div
-                        style={{ width: '20%'}}
-                        className="b-progress__line">
-                      </div>
-                    </div>
+                    <Progress
+                      cssMix = {'b-tasks-list__progress'}
+                      estimated = {29.95}
+                      spent = {26.33}
+                    />
                     <div className="b-tasks-list__txt">
                       <a href="">
                         Порядок организации проведения заседания Высшего Евразийского экономического совета
@@ -268,22 +281,29 @@ export default class App extends Component {
                   </div>
                   <div className="b-tasks-list__el">
                     <div className="b-tasks-list__status">этап просрочен</div>
-                    <div className="b-progress b-progress_alarm b-tasks-list__progress">
-                      <div
-                        style={{ width: '56%'}}
-                        className="b-progress__line">
-                      </div>
-                    </div>
+                    <Progress
+                      cssMix = {'b-tasks-list__progress'}
+                      estimated = {36.55}
+                      spent = {56.33}
+                    />
                     <div className="b-tasks-list__txt">
                       <a href="">
                         Порядок организации проведения заседания Высшего Евразийского экономического совета
                       </a>
                     </div>
                   </div>
+                  <section>
+                    <Progress
+                      cssMix = {'b-tasks-list__progress'}
+                      estimated = {36.55}
+                      spent = {56.33}
+                    />
+                  </section>
                 </div>
                 <div className="b-all">
                   <a href="">Все задачи (26)</a>
                 </div>
+                <a className="b-what-is-that b-widget__what-is" href=""></a>
               </div>
             </section>
           </main>
