@@ -1,13 +1,14 @@
-@font-face {
-    font-family: 'open_sansregular';
-    src: url('/src/webFonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot');
-    src: url('/src/webFonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/src/webFonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff') format('woff'),
-         url('/src/webFonts/opensans_regular_macroman/OpenSans-Regular-webfont.ttf') format('truetype'),
-         url('/src/webFonts/opensans_regular_macroman/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'open_sansregular';
+//     src: url('/src/webFonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot');
+//     src: url('/src/webFonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+//          url('/src/webFonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff') format('woff'),
+//          url('/src/webFonts/opensans_regular_macroman/OpenSans-Regular-webfont.ttf') format('truetype'),
+//          url('/src/webFonts/opensans_regular_macroman/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+@import url(https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic);
 
 .clearfix() {
   &:before,
@@ -26,13 +27,14 @@
 * {
   box-sizing: border-box;
 }
+
 html, body {
   height: 100%;
 }
+
 body {
   background: #f1f4f9;
-
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   line-height: 1.4666666666666666;
   background: linear-gradient(to right, #3c70a2 274px, #f1f4f9 0px);
@@ -57,6 +59,7 @@ a {
 
 @import 'b-grid/b-grid';
 @import 'b-man/b-man';
+@import 'b-actions/b-actions';
 @import 'b-action/b-action';
 @import 'b-search/b-search';
 @import 'b-page/b-page';
@@ -66,7 +69,7 @@ a {
 @import 'b-events-list/b-events-list';
 @import 'b-doc-list-pr/b-doc-list-pr';
 @import 'b-action/b-action';
-// b-calendar
+
 @import 'b-progress/b-progress';
 @import 'b-news-list-preview/b-news-list-preview';
 @import 'b-horizontal-nav/b-horizontal-nav';
@@ -80,71 +83,9 @@ a {
 @import 'b-all/b-all';
 @import 'b-what-is-that/b-what-is-that';
 
-.b-widget {
-  background: #ffffff;
-  padding: 20px;
-  margin-bottom: 27px;
-  border: 1px solid #d1d1d1;
-  position: relative;
-  &__head {
-    overflow: hidden;
-    border-bottom: 1px solid #d1d1d1;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-  }
-  &__title {
-    margin-right: 35px;
-    overflow: hidden;
-  }
-  &__what-is {
-    position: absolute;
-    right: 25px;
-    top: 17px;
-  }
-}
+@import 'b-box/b-box';
+@import 'b-box-inner/b-box-inner';
+@import 'b-widget/b-widget';
+@import 'b-calendar/b-calendar';
 
-
-.b-box {
-  .clearfix;
-  &__col-1-wrap {
-    width: 100%;
-    float: left;
-  }
-  &__col-1 {
-    margin-right: 333px;
-  }
-  &__col-2 {
-    float: right;;
-    width: 297px;
-    margin-left: -297px;
-  }
-  &_head  {
-    margin: 0;
-  }
-  &_head &__col-1 {
-    padding: 0;
-    background: transparent;
-  }
-  &_head &__col-2 {
-    padding: 0;
-    background: transparent;
-    padding-top: 20px;
-  }
-}
-
-.b-actions {
-  display: table;
-  width: 100%;
-  border-collapse:separate;
-  border-spacing: 30px 0;
-  &__el {
-    display: table-cell;
-    vertical-align: middle;
-    width: 33%;
-    border: 1px solid #d1d1d1;
-    padding: 5px;
-    background: white;
-  }
-}
-
-@import 'dev';
+//@import 'dev';

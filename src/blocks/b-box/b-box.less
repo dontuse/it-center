@@ -1,0 +1,29 @@
+.b-box {
+  .clearfix;
+  &__col-1-wrap {
+    width: 100%;
+    float: left;
+  }
+  &__col-1 {
+    margin-right: 333px;
+  }
+  &__col-2 {
+    float: right;;
+    width: 300px;
+    margin-left: -300px;
+  }
+  @media (max-width: 1180px) {
+    &__col-1-wrap {
+      width: auto;
+      float: none;
+    }
+    &__col-1 {
+      margin-right: 0;
+    }
+    &__col-2 {
+      float: none;
+      width: auto;;
+      margin-left: 0;
+    }
+  }
+}

@@ -4,8 +4,8 @@ class SystemsList extends React.Component {
   render () {
     return (
       <div className="b-systems-list">
-        {this.props.systems.map((system) =>
-          <a href="" className="b-systems-list__item">
+        {this.props.systems.map((system, key) =>
+          <a key={key} href="" className="b-systems-list__item">
             <div className="b-systems-list__pic-box">
               <img src={system.pic} alt=""/>
             </div>

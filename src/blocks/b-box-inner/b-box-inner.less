@@ -1,0 +1,30 @@
+.b-box-inner {
+  .clearfix;
+  &__col-1-wrap {
+    width: 100%;
+    float: left;
+  }
+  &__col-1 {
+    margin-right: 333px;
+  }
+  &__col-2 {
+    float: right;;
+    width: 273px;
+    margin-left: -273px;
+  }
+  @media (max-width: 1180px) {
+    &__col-1-wrap {
+      width: auto;
+      float: none;
+    }
+    &__col-1 {
+      margin-right: 0;
+    }
+    &__col-2 {
+      float: none;
+      width: auto;;
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+  }
+}

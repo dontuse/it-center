@@ -1,42 +1,19 @@
 import React, { Component } from 'react';
 import Man from './components/Man.jsx';
-import HorizontalNav from './components/HorizontalNav.jsx';
 import VerticalNav from './components/VerticalNav.jsx';
-import Search from './components/Search.jsx';
 import NewsListPreview from './components/NewsListPreview.jsx';
 import EventsList from './components/EventsList.jsx';
 import DocListPr from './components/DocListPr.jsx';
 import SystemsList from './components/SystemsList.jsx';
 import Progress from './components/Progress.jsx';
+import FakeCalendar from './components/FakeCalendar.jsx';
+import Header from './components/Header.jsx';
 
 export default class App extends Component {
   render() {
     return (
       <div className="b-page">
-        <header className="b-header b-grid">
-          <div className="b-wrap">
-            <aside className="b-grid__col-1">
-              <a className="b-logo" href="">
-                <span className="b-logo__pic-box"></span>
-                <span className="b-logo__txt-box">
-                  Информационно-
-                  справочная система
-                </span>
-              </a>
-            </aside>
-            <section className="b-grid__col-2 b-page__head-box b-box b-box_head">
-              <div className="b-box__col-1-wrap">
-                <div className="b-box__col-1">
-                  <HorizontalNav
-                    />
-                </div>
-              </div>
-              <div className="b-box__col-2">
-                <Search />
-              </div>
-            </section>
-          </div>
-        </header>
+        <Header />
         <section className="b-grid b-wrap">
           <aside className="b-grid__col-1 b-page__aside">
             <Man
@@ -182,9 +159,19 @@ export default class App extends Component {
                   Предстоящие события
                 </div>
               </header>
-              <div className="b-box">
-                <div className="b-box__col-1-wrap">
-                  <div className="b-box__col-1">
+              <div className="b-box-inner">
+                <div className="b-box-inner__col-2">
+                  <FakeCalendar
+                    year = {2016}
+                    month = {12}
+                    activeDays = {
+                      [5,10,17,22]
+                    }
+                    currentDay = {8}
+                  />
+                </div>
+                <div className="b-box-inner__col-1-wrap">
+                  <div className="b-box-inner__col-1">
                     <EventsList
                       events = {[
                         {
@@ -216,9 +203,7 @@ export default class App extends Component {
                       />
                   </div>
                 </div>
-                <div className="b-box__col-2">
-                  wefwefwefew
-                </div>
+
               </div>
               <a className="b-what-is-that b-widget__what-is" href=""></a>
             </section>
@@ -257,6 +242,7 @@ export default class App extends Component {
                   <div className="b-all">
                     <a href="">Все документы (105)</a>
                   </div>
+                  <a className="b-what-is-that b-widget__what-is" href=""></a>
                 </div>
               </div>
               <div className="b-box__col-2 b-widget">
@@ -292,13 +278,6 @@ export default class App extends Component {
                       </a>
                     </div>
                   </div>
-                  <section>
-                    <Progress
-                      cssMix = {'b-tasks-list__progress'}
-                      estimated = {36.55}
-                      spent = {56.33}
-                    />
-                  </section>
                 </div>
                 <div className="b-all">
                   <a href="">Все задачи (26)</a>

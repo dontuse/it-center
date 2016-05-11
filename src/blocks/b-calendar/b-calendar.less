@@ -1,0 +1,84 @@
+@padd : 16px;
+
+.b-calendar {
+  border: 1px solid #c4c4c4;
+  padding: 0 @padd;
+  position: relative;
+  &__row {}
+  &__header {
+    border-bottom: 1px solid #c4c4c4;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-left: -@padd;
+    margin-right: -@padd;
+  }
+  &__head {
+    font-weight: bold;
+  }
+  &__current-month {
+    color: #4191df;
+    font-size: 13px;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__row {
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    margin-bottom: 12px;
+  }
+  &__grid {
+    display: inline-block;
+    vertical-align: top;
+    width: 14.285714285714286%;
+  }
+  &__container {
+    width: 100%;
+  }
+  &__arrow {
+    width: 12px;
+    height: 11px;
+    background: url('/src/blocks/i-pic/left-arrow.png');
+    top: 12px;
+    cursor: pointer;
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 144dpi) {
+      background-image: url('/src/blocks/i-pic/left-arrow_x_2.png');
+      background-size: contain;
+    }
+  }
+  &__arrow_left {
+    position: absolute;
+    left: 12px;
+  }
+  &__arrow_right {
+    position: absolute;
+    right: 12px;
+    transform: rotate(180deg);
+  }
+  &__day {
+    display: block;
+    margin: 0 auto;
+    color: #999999;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 13px;
+    border-radius: 100px;
+    text-align: center;
+    &_active {
+      color: #19150d;
+      background: #ba9b65;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    &_current {
+      color: #19150d;
+      background: #fb7777;
+      font-weight: bold;
+    }
+  }
+}
