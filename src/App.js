@@ -36,6 +36,10 @@ export default class App extends Component {
                   link: ''
                 },
                 {
+                  name: 'Справочные материалы',
+                  link: ''
+                },
+                {
                   name: 'Регламенты',
                   link: ''
                 },
