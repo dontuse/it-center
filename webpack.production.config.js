@@ -9,22 +9,21 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
+    filename: 'bundle.js'
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify("production")
+    }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
-    new ExtractTextPlugin('[name].css'),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
         warnings: false,
         screw_ie8: true
       }
     }),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify("production")
-    })
+    new ExtractTextPlugin('[name].css'),
   ],
   module: {
     loaders: [{
@@ -34,7 +33,7 @@ module.exports = {
     },
     {
       test: /\.less$/,
-      loader: ExtractTextPlugin.extract('style-loader','css!postcss-loader!less')
+      loader: ExtractTextPlugin.extract('css!postcss-loader!less')
     },
     {
       test: /\.(eot|woff|woff2|ttf|svg|png|jpg)$/,
