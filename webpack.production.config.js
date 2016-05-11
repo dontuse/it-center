@@ -5,10 +5,11 @@ var autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: [
-    './src/index'
+    path.resolve(__dirname, 'src/index.js'),
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
+    //path: path.join(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   plugins: [
@@ -29,7 +30,6 @@ module.exports = {
     loaders: [{
       test: /\.js|jsx$/,
       loaders: ['react-hot', 'babel'],
-      include: path.join(__dirname, 'src')
     },
     {
       test: /\.less$/,

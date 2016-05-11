@@ -8,6 +8,8 @@
 //     font-weight: normal;
 //     font-style: normal;
 // }
+@blocksPath : '/src/blocks';
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic);
 
 .clearfix() {
@@ -28,7 +30,7 @@
   box-sizing: border-box;
 }
 
-html, body {
+html {
   height: 100%;
 }
 
@@ -40,6 +42,7 @@ body {
   background: linear-gradient(to right, #3c70a2 274px, #f1f4f9 0px);
   position: relative;
   -webkit-font-smoothing: antialiased;
+  min-height: 100%;
 }
 
 a {
@@ -50,13 +53,8 @@ a {
   }
 }
 
-.b-wrap {
-  min-width: 900px;
-  max-width: 1400px;
-  padding-right: 20px;
-}
 
-
+@import 'b-wrap/b-wrap';
 @import 'b-grid/b-grid';
 @import 'b-man/b-man';
 @import 'b-actions/b-actions';

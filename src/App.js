@@ -151,6 +151,7 @@ export default class App extends Component {
                   ]}
                 />
                 <a className="b-what-is-that b-widget__what-is" href=""></a>
+                <a className="b-what-is-that b-what-is-that_plus b-widget__what-is-2" href=""></a>
               </div>
             </section>
             <section className="b-widget">
@@ -288,16 +289,18 @@ export default class App extends Component {
           </main>
         </section>
         <footer className="b-page__footer b-footer">
-          <div className="b-footer__box-1">
-            <a className="b-f-logo" href=""></a>
-          </div>
-          <div className="b-footer__box-2">
-            <nav className="b-simple-nav">
-              <a className="b-simple-nav__item" href="">Евразийский экономический союз</a>
-              <a className="b-simple-nav__item" href="">Евразийская экономическая комиссия</a>
-              <a className="b-simple-nav__item" href="">Правовой портал</a>
-            </nav>
-          </div>
+          <section className="b-footer__container">
+            <div className="b-footer__box-1">
+              <a className="b-f-logo" href=""></a>
+            </div>
+            <div className="b-footer__box-2">
+              <nav className="b-simple-nav">
+                <a className="b-simple-nav__item" href="">Евразийский экономический союз</a>
+                <a className="b-simple-nav__item" href="">Евразийская экономическая комиссия</a>
+                <a className="b-simple-nav__item" href="">Правовой портал</a>
+              </nav>
+            </div>
+          </section>
         </footer>
       </div>
     );

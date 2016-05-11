@@ -1,10 +1,14 @@
 .b-logo {
+  &:hover {
+    text-decoration: none;
+  }
   text-decoration: none;
   background: #ba9b65;
   overflow: hidden;
   display: block;
+  text-decoration: none;
   &__pic-box {
-    background: url("/src/blocks/i-pic/logo.png") no-repeat center center;
+    background: url("@{blocksPath}/i-pic/logo.png") no-repeat center center;
     width: 78px;
     height: 78px;
     border-right: 1px solid #ddcdb2;
@@ -16,7 +20,8 @@
     overflow: hidden;
     color: #ffffff;
     font-size: 15px;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-left: 20px;
+    font-weight: bold;
   }
 }

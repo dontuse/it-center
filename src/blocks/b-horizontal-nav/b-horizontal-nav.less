@@ -5,8 +5,15 @@
     line-height: 73px;
     border-bottom: 1px;
     margin-right: 44px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @media (max-width: 1180px) {
+      margin-right: 25px;
+    }
   }
   &__item_active {
     border-bottom: 5px solid #3d71a3;
+    color: #000000;
   }
 }
